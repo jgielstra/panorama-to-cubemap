@@ -1,0 +1,19 @@
+{
+  "name": "panorama-to-cubemap",
+  "version": "1.0.0",
+  "description": "Standalone util to create cubemap from equirectangular image",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaxry/panorama-to-cubemap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.31.0"
+  }
+}
