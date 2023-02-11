@@ -1,5 +1,5 @@
-import path from "path";
-import sharp from "sharp";
+const path = require("path");
+const sharp = require('sharp');
 
 const mimeType = {
   'jpg': 'image/jpeg',
@@ -168,7 +168,7 @@ const orientations = {
   }
 };
 
-export async function renderFace({data: readData, face, rotation, interpolation, maxWidth = Infinity}) {
+async function renderFace({data: readData, face, rotation, interpolation, maxWidth = Infinity}) {
 
   const faceWidth = Math.min(maxWidth, readData.width / 4);
   const faceHeight = faceWidth;
@@ -256,5 +256,5 @@ async function processImage(imageFileName, outDir='.', prefix=undefined) {
       .map((faceName) => processFace({ data , width, height, channels }, pathPrefix, faceName))
   return Promise.all(faces);
 }
-
 // processImage('./20190710-1.jpg', '/tmp', 'new')
+module.exports = { processImage };
